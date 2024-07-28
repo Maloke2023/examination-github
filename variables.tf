@@ -1,30 +1,15 @@
-variable "ami" {
-    description = "provide ami ID"
-    type = string
+variable "region" {
+  default = "us-west-2"
 }
 
-variable "instance_type" {
-    description = "provide instance type"
-    type = string
+variable "vpc_cidr" {
+  default = "10.0.0.0/16"
 }
 
-variable "key_name" {
-    description = "provide instance key"
-    type = string 
+variable "public_subnet_cidr" {
+  default = "10.0.1.0/24"
 }
 
-variable "availability_zone" {
-    description = "instance availability zone"
-    type = string 
-}
-
-variable "aws_security_group" {
-    description = "provide security group "
-    type = string
-}
-
-variable "associate_public_ip_address" {
-    description = "provide ip address"
-    type = string
-  
+variable "private_subnet_cidr" {
+  default = "10.0.2.0/24"
 }
